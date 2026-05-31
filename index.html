@@ -190,12 +190,14 @@
     .video-poster {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #2D1A0E 0%, #1A0F07 40%, #3D1F0A 100%);
+      background: linear-gradient(rgba(20,12,7,0.42), rgba(20,12,7,0.42)),
+                  url('hero-artist.jpg') center 22% / cover no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
+      justify-content: flex-end;
+      gap: 14px;
+      padding-bottom: 7%;
       transition: opacity 0.3s;
     }
     .video-poster.hidden { opacity: 0; pointer-events: none; }
@@ -204,18 +206,20 @@
       font-size: clamp(1.1rem, 2.5vw, 1.6rem);
       font-style: italic;
       font-weight: 300;
-      color: rgba(250,246,239,0.7);
+      color: rgba(250,246,239,0.95);
       letter-spacing: 0.04em;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
     }
     .play-btn-large {
       width: 72px; height: 72px;
       border-radius: 50%;
-      background: var(--orange);
+      background: rgba(232,88,26,0.5);
+      backdrop-filter: blur(1px);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 8px 32px rgba(232,88,26,0.5);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 8px 32px rgba(232,88,26,0.35);
     }
     .hero-video-player:hover .play-btn-large {
       transform: scale(1.08);
@@ -224,9 +228,10 @@
     .play-btn-large svg { width: 28px; height: 28px; margin-left: 4px; }
     .video-poster-sub {
       font-size: 0.78rem;
-      color: rgba(250,246,239,0.4);
+      color: rgba(250,246,239,0.75);
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
     /* Orange accent line at bottom of video */
     .hero-video-player::after {
@@ -563,7 +568,7 @@
     /* Product visual mockup area */
     .product-visual {
       position: relative;
-      aspect-ratio: 720/400;
+      aspect-ratio: 1492/992;
       overflow: hidden;
       background: #F7F3ED;
       border-bottom: 1px solid var(--border);
@@ -838,7 +843,7 @@
     </h1>
 
     <p class="hero-sub">
-      A song about the moments that matter most — for every person who has ever been too busy to be present.
+      A song about the tension of greatness... for dads pursuing provision and presence.
     </p>
 
     <!-- VIDEO PLAYER -->
@@ -848,7 +853,6 @@
         <video id="heroVideo" src="" preload="none" controls style="display:none;"></video>
 
         <div class="video-poster" id="videoPoster">
-          <div class="video-poster-title">"The story behind the song..."</div>
           <div class="play-btn-large">
             <svg viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
@@ -862,12 +866,6 @@
       <a href="#merch" class="btn-ghost">Shop #DTYSO</a>
     </div>
 
-    <p class="hero-hashtag">#DTYSO &nbsp;·&nbsp; Coming Soon</p>
-
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
   </section>
 
   <!-- ══ MANIFESTO BAND ══ -->
@@ -984,7 +982,7 @@
         <!-- PRODUCT 1: HOODIE -->
         <div class="product-card reveal reveal-delay-1">
           <div class="product-visual">
-            <img src="hoodie-mockup.svg" alt="DTYSO hoodie — front and back, #DTYSO printed in orange" />
+            <img src="merch-hoodie.png" alt="DTYSO hoodie — white with #DTYSO badge" />
           </div>
           <div class="product-info">
             <div class="product-name">The Movement Hoodie</div>
@@ -1005,7 +1003,7 @@
         <!-- PRODUCT 2: T-SHIRT -->
         <div class="product-card reveal reveal-delay-2">
           <div class="product-visual">
-            <img src="tshirt-mockup.svg" alt="DTYSO tee — front and back, #DTYSO printed in orange" />
+            <img src="merch-tee.png" alt="DTYSO tee — white with #DTYSO badge" />
           </div>
           <div class="product-info">
             <div class="product-name">The Presence Tee</div>
@@ -1026,7 +1024,7 @@
         <!-- PRODUCT 3: BEANIE -->
         <div class="product-card reveal reveal-delay-3">
           <div class="product-visual">
-            <img src="beanie-mockup.svg" alt="DTYSO beanie — front and back, #DTYSO knit in orange" />
+            <img src="merch-beanie.png" alt="DTYSO beanie — white with #DTYSO patch" />
           </div>
           <div class="product-info">
             <div class="product-name">The #DTYSO Beanie</div>
@@ -1269,10 +1267,8 @@
         video.style.display = 'block';
         poster.classList.add('hidden');
         video.play();
-      } else {
-        // No video yet — show a placeholder message
-        poster.querySelector('.video-poster-sub').textContent = 'Video coming soon — drop your file in the src attribute!';
       }
+      // When a real video src is added, it plays. Otherwise nothing changes.
     }
 
     // ── EMAIL SIGNUP ──

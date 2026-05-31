@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300">
+  <rect width="700" height="300" fill="#FFFFFF"/>
+  <rect x="140" y="85" width="420" height="130" rx="65" fill="#E8581A"/>
+  <text x="350" y="172" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-size="74" font-weight="900" fill="#FFFFFF"
+        text-anchor="middle" letter-spacing="4">#DTYSO</text>
+</svg>
