@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <defs>
+    <filter id="drop2" x="-20%" y="-15%" width="140%" height="135%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#9b8e7d" flood-opacity="0.28"/>
+    </filter>
+    <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="softer2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+    <radialGradient id="tee-body" cx="50%" cy="28%" r="78%">
+      <stop offset="0%"  stop-color="#F3ECE0"/>
+      <stop offset="50%" stop-color="#E9DFD2"/>
+      <stop offset="85%" stop-color="#DACEBE"/>
+      <stop offset="100%" stop-color="#CCBFAD"/>
+    </radialGradient>
+    <linearGradient id="tee-sl-l" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E6DCCE"/><stop offset="100%" stop-color="#C8BBA8"/>
+    </linearGradient>
+    <linearGradient id="tee-sl-r" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6DCCE"/><stop offset="100%" stop-color="#C8BBA8"/>
+    </linearGradient>
+    <linearGradient id="collar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D6CABA"/><stop offset="100%" stop-color="#C0B3A0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="400" fill="#F7F3ED"/>
+  <text x="-18" y="320" font-family="'Arial Black',sans-serif" font-size="300" font-weight="900"
+        fill="#E8581A" opacity="0.10" letter-spacing="-20">#</text>
+
+  <!-- ===== FRONT ===== -->
+  <g transform="translate(34,40)" filter="url(#drop2)">
+    <!-- left sleeve -->
+    <path d="M108 70 C76 72, 46 84, 28 104 L14 132 C10 144, 20 152, 32 148 L52 128 C66 110, 86 96, 108 90 Z"
+          fill="url(#tee-sl-l)"/>
+    <!-- right sleeve -->
+    <path d="M242 70 C274 72, 304 84, 322 104 L336 132 C340 144, 330 152, 318 148 L298 128 C284 110, 264 96, 242 90 Z"
+          fill="url(#tee-sl-r)"/>
+    <!-- collar -->
+    <path d="M122 64 C140 50, 158 46, 175 46 C192 46, 210 50, 228 64
+             C218 76, 208 80, 198 80 C188 70, 182 68, 175 68
+             C168 68, 162 70, 152 80 C142 80, 132 76, 122 64 Z" fill="url(#collar)"/>
+    <path d="M130 66 C150 56, 200 56, 220 66" stroke="#B0A290" stroke-width="0.9" fill="none" opacity="0.5"/>
+    <!-- body -->
+    <path d="M108 72 C92 84, 86 104, 86 128 L82 318 C82 330, 90 336, 102 336
+             L248 336 C260 336, 268 330, 268 318 L264 128 C264 104, 258 84, 242 72
+             C220 64, 198 62, 175 62 C152 62, 130 64, 108 72 Z" fill="url(#tee-body)"/>
+    <!-- highlight + folds -->
+    <ellipse cx="175" cy="180" rx="55" ry="95" fill="#fff" opacity="0.14" filter="url(#softer2)"/>
+    <path d="M118 120 C116 220, 120 290, 116 322" stroke="#bbae9b" stroke-width="8" fill="none" opacity="0.18" filter="url(#softer2)"/>
+    <path d="M232 120 C234 220, 230 290, 234 322" stroke="#bbae9b" stroke-width="8" fill="none" opacity="0.18" filter="url(#softer2)"/>
+    <path d="M108 78 C116 98,118 116,116 132" stroke="#a99c89" stroke-width="6" fill="none" opacity="0.28" filter="url(#soft2)"/>
+    <path d="M242 78 C234 98,232 116,234 132" stroke="#a99c89" stroke-width="6" fill="none" opacity="0.28" filter="url(#soft2)"/>
+    <!-- bottom hem -->
+    <path d="M82 318 C82 330,90 338,102 338 L248 338 C260 338,268 330,268 318
+             L268 326 C268 338,260 344,248 344 L102 344 C90 344,82 338,82 326 Z" fill="#D0C4B2" opacity="0.7"/>
+    <!-- centered #DTYSO -->
+    <text x="175" y="185" font-family="'Arial Black','Helvetica Neue',sans-serif"
+          font-size="32" font-weight="900" fill="#E8581A" text-anchor="middle" letter-spacing="1.5">#DTYSO</text>
+  </g>
+  <text x="205" y="392" font-family="Arial,sans-serif" font-size="9" fill="#A99B88"
+        text-anchor="middle" letter-spacing="2.5" font-weight="700">FRONT</text>
+
+  <line x1="360" y1="30" x2="360" y2="372" stroke="#E4DCD0" stroke-width="1"/>
+
+  <!-- ===== BACK ===== -->
+  <g transform="translate(394,40)" filter="url(#drop2)">
+    <path d="M108 70 C76 72, 46 84, 28 104 L14 132 C10 144, 20 152, 32 148 L52 128 C66 110, 86 96, 108 90 Z"
+          fill="url(#tee-sl-l)"/>
+    <path d="M242 70 C274 72, 304 84, 322 104 L336 132 C340 144, 330 152, 318 148 L298 128 C284 110, 264 96, 242 90 Z"
+          fill="url(#tee-sl-r)"/>
+    <!-- back collar (higher, smaller) -->
+    <path d="M128 66 C148 58, 202 58, 222 66 C212 74, 200 76, 175 76 C150 76, 138 74, 128 66 Z" fill="url(#collar)"/>
+    <!-- body -->
+    <path d="M108 72 C92 84, 86 104, 86 128 L82 318 C82 330, 90 336, 102 336
+             L248 336 C260 336, 268 330, 268 318 L264 128 C264 104, 258 84, 242 72
+             C220 64, 198 62, 175 62 C152 62, 130 64, 108 72 Z" fill="url(#tee-body)"/>
+    <ellipse cx="175" cy="180" rx="55" ry="95" fill="#fff" opacity="0.12" filter="url(#softer2)"/>
+    <path d="M118 120 C116 220, 120 290, 116 322" stroke="#bbae9b" stroke-width="8" fill="none" opacity="0.16" filter="url(#softer2)"/>
+    <path d="M232 120 C234 220, 230 290, 234 322" stroke="#bbae9b" stroke-width="8" fill="none" opacity="0.16" filter="url(#softer2)"/>
+    <path d="M108 78 C116 98,118 116,116 132" stroke="#a99c89" stroke-width="6" fill="none" opacity="0.26" filter="url(#soft2)"/>
+    <path d="M242 78 C234 98,232 116,234 132" stroke="#a99c89" stroke-width="6" fill="none" opacity="0.26" filter="url(#soft2)"/>
+    <path d="M82 318 C82 330,90 338,102 338 L248 338 C260 338,268 330,268 318
+             L268 326 C268 338,260 344,248 344 L102 344 C90 344,82 338,82 326 Z" fill="#D0C4B2" opacity="0.7"/>
+    <!-- large centered #DTYSO -->
+    <text x="175" y="210" font-family="'Arial Black','Helvetica Neue',sans-serif"
+          font-size="44" font-weight="900" fill="#E8581A" text-anchor="middle" letter-spacing="1">#DTYSO</text>
+  </g>
+  <text x="565" y="392" font-family="Arial,sans-serif" font-size="9" fill="#A99B88"
+        text-anchor="middle" letter-spacing="2.5" font-weight="700">BACK</text>
+</svg>

@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <defs>
+    <filter id="drop3" x="-25%" y="-15%" width="150%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#9b8e7d" flood-opacity="0.28"/>
+    </filter>
+    <filter id="soft3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.5"/></filter>
+    <radialGradient id="beanie-body" cx="50%" cy="32%" r="72%">
+      <stop offset="0%"  stop-color="#F1E9DC"/>
+      <stop offset="52%" stop-color="#E6DBCF"/>
+      <stop offset="88%" stop-color="#D6CABA"/>
+      <stop offset="100%" stop-color="#C6B9A7"/>
+    </radialGradient>
+    <linearGradient id="beanie-cuff" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DDD2C2"/><stop offset="100%" stop-color="#C4B7A4"/>
+    </linearGradient>
+    <clipPath id="cuff-clip">
+      <path d="M30 150 C28 168,34 184,52 186 L208 186 C226 184,232 168,230 150
+               C230 178,226 210,210 226 C190 234,150 238,130 238
+               C110 238,70 234,50 226 C34 210,30 178,30 150 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="720" height="400" fill="#F7F3ED"/>
+  <text x="-18" y="320" font-family="'Arial Black',sans-serif" font-size="300" font-weight="900"
+        fill="#E8581A" opacity="0.10" letter-spacing="-20">#</text>
+
+  <!-- ===== FRONT ===== -->
+  <g transform="translate(70,70)" filter="url(#drop3)">
+    <!-- dome -->
+    <path d="M30 150
+             C24 96, 60 40, 130 32
+             C200 40, 236 96, 230 150
+             C232 170, 224 184, 206 186
+             L54 186
+             C36 184, 28 170, 30 150 Z" fill="url(#beanie-body)"/>
+    <!-- knit ribbing lines (vertical) on dome -->
+    <g stroke="#c4b7a4" stroke-width="1.4" opacity="0.35" fill="none">
+      <path d="M58 180 C52 120, 70 60, 100 40"/>
+      <path d="M82 184 C78 120, 88 56, 110 38"/>
+      <path d="M108 185 C106 118, 110 52, 124 34"/>
+      <path d="M130 186 C130 116, 130 50, 130 33"/>
+      <path d="M152 185 C154 118, 150 52, 136 34"/>
+      <path d="M178 184 C182 120, 172 56, 150 38"/>
+      <path d="M202 180 C208 120, 190 60, 160 40"/>
+    </g>
+    <!-- top highlight -->
+    <ellipse cx="120" cy="80" rx="60" ry="40" fill="#fff" opacity="0.16" filter="url(#soft3)"/>
+    <!-- side shadows -->
+    <path d="M34 150 C30 120,40 84,58 60" stroke="#fff" stroke-width="7" fill="none" opacity="0.2" filter="url(#soft3)"/>
+    <path d="M226 150 C230 120,220 84,202 60" stroke="#a99c89" stroke-width="9" fill="none" opacity="0.25" filter="url(#soft3)"/>
+    <!-- folded cuff -->
+    <path d="M30 150 C28 168,34 184,52 186 L208 186 C226 184,232 168,230 150
+             C230 178,226 210,210 226 C190 234,150 238,130 238
+             C110 238,70 234,50 226 C34 210,30 178,30 150 Z" fill="url(#beanie-cuff)"/>
+    <!-- cuff ribbing -->
+    <g stroke="#b3a691" stroke-width="1.6" opacity="0.4" clip-path="url(#cuff-clip)">
+      <line x1="56" y1="150" x2="58" y2="240"/>
+      <line x1="74" y1="150" x2="76" y2="240"/>
+      <line x1="92" y1="150" x2="93" y2="240"/>
+      <line x1="110" y1="150" x2="110" y2="240"/>
+      <line x1="130" y1="150" x2="130" y2="240"/>
+      <line x1="150" y1="150" x2="150" y2="240"/>
+      <line x1="168" y1="150" x2="167" y2="240"/>
+      <line x1="186" y1="150" x2="184" y2="240"/>
+      <line x1="204" y1="150" x2="202" y2="240"/>
+    </g>
+    <!-- cuff top edge -->
+    <path d="M30 150 C90 158,170 158,230 150" stroke="#a99c89" stroke-width="1.4" fill="none" opacity="0.4"/>
+    <!-- centered #DTYSO on cuff -->
+    <text x="130" y="208" font-family="'Arial Black','Helvetica Neue',sans-serif"
+          font-size="22" font-weight="900" fill="#E8581A" text-anchor="middle" letter-spacing="1">#DTYSO</text>
+  </g>
+  <text x="200" y="392" font-family="Arial,sans-serif" font-size="9" fill="#A99B88"
+        text-anchor="middle" letter-spacing="2.5" font-weight="700">FRONT</text>
+
+  <line x1="360" y1="60" x2="360" y2="372" stroke="#E4DCD0" stroke-width="1"/>
+
+  <!-- ===== BACK ===== -->
+  <g transform="translate(430,70)" filter="url(#drop3)">
+    <path d="M30 150
+             C24 96, 60 40, 130 32
+             C200 40, 236 96, 230 150
+             C232 170, 224 184, 206 186
+             L54 186
+             C36 184, 28 170, 30 150 Z" fill="url(#beanie-body)"/>
+    <g stroke="#c4b7a4" stroke-width="1.4" opacity="0.35" fill="none">
+      <path d="M58 180 C52 120, 70 60, 100 40"/>
+      <path d="M82 184 C78 120, 88 56, 110 38"/>
+      <path d="M108 185 C106 118, 110 52, 124 34"/>
+      <path d="M130 186 C130 116, 130 50, 130 33"/>
+      <path d="M152 185 C154 118, 150 52, 136 34"/>
+      <path d="M178 184 C182 120, 172 56, 150 38"/>
+      <path d="M202 180 C208 120, 190 60, 160 40"/>
+    </g>
+    <ellipse cx="120" cy="80" rx="60" ry="40" fill="#fff" opacity="0.14" filter="url(#soft3)"/>
+    <path d="M34 150 C30 120,40 84,58 60" stroke="#fff" stroke-width="7" fill="none" opacity="0.18" filter="url(#soft3)"/>
+    <path d="M226 150 C230 120,220 84,202 60" stroke="#a99c89" stroke-width="9" fill="none" opacity="0.22" filter="url(#soft3)"/>
+    <path d="M30 150 C28 168,34 184,52 186 L208 186 C226 184,232 168,230 150
+             C230 178,226 210,210 226 C190 234,150 238,130 238
+             C110 238,70 234,50 226 C34 210,30 178,30 150 Z" fill="url(#beanie-cuff)"/>
+    <g stroke="#b3a691" stroke-width="1.6" opacity="0.4" clip-path="url(#cuff-clip)">
+      <line x1="56" y1="150" x2="58" y2="240"/>
+      <line x1="74" y1="150" x2="76" y2="240"/>
+      <line x1="92" y1="150" x2="93" y2="240"/>
+      <line x1="110" y1="150" x2="110" y2="240"/>
+      <line x1="130" y1="150" x2="130" y2="240"/>
+      <line x1="150" y1="150" x2="150" y2="240"/>
+      <line x1="168" y1="150" x2="167" y2="240"/>
+      <line x1="186" y1="150" x2="184" y2="240"/>
+      <line x1="204" y1="150" x2="202" y2="240"/>
+    </g>
+    <path d="M30 150 C90 158,170 158,230 150" stroke="#a99c89" stroke-width="1.4" fill="none" opacity="0.4"/>
+    <!-- small woven logo tag at back center -->
+    <text x="130" y="120" font-family="'Arial Black','Helvetica Neue',sans-serif"
+          font-size="16" font-weight="900" fill="#E8581A" text-anchor="middle" letter-spacing="0.5">#DTYSO</text>
+  </g>
+  <text x="560" y="392" font-family="Arial,sans-serif" font-size="9" fill="#A99B88"
+        text-anchor="middle" letter-spacing="2.5" font-weight="700">BACK</text>
+</svg>
